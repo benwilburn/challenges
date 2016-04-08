@@ -1,0 +1,38 @@
+<!--
+
+Challenge #1
+
+Create a form that has a range input, and a number input, both with the same values for min, max, and default. When the user changes the value on the range input, the value of the number input should match. The opposite should be true. The values of the two inputs should always be synchronized.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Challenge #1</title>
+	<link rel="stylesheet" href="">
+
+</head>
+<body>
+	<header>
+		<h1>Challenge #1</h1>
+	</header>
+	<div>
+		<form>
+			<input oninput="number.value=rangenumber.value" type="range" id="rangenumber" name="rangenumber" min="10" max="50" step="5" value="20">
+			<input oninput="rangenumber.value=number.value" type="number" name="number" step="5" value="20">
+		</form>
+		<form oninput="amount.value=rangeInput.value">
+	        <input type="range" id="rangeInput" name="rangeInput" min="0" max="100">
+	        <output> name="amount" for="rangeInput">0</output>
+    	</form>
+    	<form>
+    		<label for="range">Range</label>
+    		<input id="range" type="range" min="10" max="50" step="5" value="20" onchange="rangeoutput.value=value"></input>
+    		<output id="rangeoutput">20</output>
+    	</form>
+	</div>
+</body>
+</html>
